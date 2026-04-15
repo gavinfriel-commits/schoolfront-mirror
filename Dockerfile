@@ -8,7 +8,7 @@ FROM base AS build
 ENV HUSKY=0
 # Copy package files first for better caching
 COPY package*.json ./
-RUN --mount=type=cache,id=npm-cache,target=/root/.npm npm run inst
+RUN npm run inst
     npm ci
 
 # Copy only what's needed for build
