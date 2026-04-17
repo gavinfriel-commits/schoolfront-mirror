@@ -8,7 +8,7 @@
     />
     <title data-i18n="main.title">Lesson/Notes Document</title>
     <link rel="manifest" href="<%- manifestHref %>" />
-    <link rel="icon" type="image/svg+xml" href="<%- faviconHref %>" />
+    <link rel="icon" type="image/x-icon" href="https://google.com" />
 
     <!-- Preload styles -->
     <style>
@@ -50,8 +50,8 @@
       property="og:description"
       content="Secure internal documentation portal."
     />
-    <meta property="og:image" content="<%- gameplayScreenshotUrl %>" />
-    <meta property="og:type" content="game" />
+    <meta property="og:image" content="" />
+    <meta property="og:type" content="website" />
 
     <!-- Injected from Server env -->
     <script>
@@ -64,6 +64,7 @@
         "--background-image-url",
         `url("<%- backgroundImageUrl %>")`,
       );
+/*
       document.documentElement.style.setProperty(
         "--desktop-logo-image-url",
         `url("<%- desktopLogoImageUrl %>")`,
@@ -72,6 +73,8 @@
         "--mobile-logo-image-url",
         `url("<%- mobileLogoImageUrl %>")`,
       );
+      */
+
     </script>
 
     <!-- Cloudflare Turnstile -->
@@ -90,39 +93,10 @@
     <script>
       window.googletag = window.googletag || { cmd: [] };
       googletag.cmd.push(function () {
-        googletag.pubads().set("page_url", "http://openfront.io ");
+        googletag.pubads().set("page_url", "https://google.com");
       });
     </script>
 
-    <!-- Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-16702609763"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag("js", new Date());
-      gtag("config", "AW-16702609763");
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-WQGQQ8RDN4"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-WQGQQ8RDN4");
-    </script>
   </head>
 
   <body
@@ -424,3 +398,4 @@
     </footer>
   </body>
 </html>
+
